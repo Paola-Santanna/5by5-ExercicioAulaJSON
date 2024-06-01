@@ -76,6 +76,7 @@ namespace Proj2_Prof_Andre
 
                 case 7:
                     Console.WriteLine("Inserir todos os registros no SQLServer");
+                    TestFilters.InsertSqlDB(list);
                     TestFilters.CleanPrompt();
                     break;
 

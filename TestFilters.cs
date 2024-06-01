@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using Microsoft.Data.SqlClient;
 
 namespace Proj2_Prof_Andre
 {
@@ -56,6 +57,22 @@ namespace Proj2_Prof_Andre
             }
         }
 
+        public static void InsertSqlDB (List<PenalidadesAplicadas> l)
+        {
+            Banco conn = new();
+            SqlConnection conexaoSql = new(conn.Caminho());
+            ConsultaBanco consulta = new ConsultaBanco();
+
+            conexaoSql.Open();
+            foreach (var p in l)
+            {
+                consulta.InsercaoDados(p.razaoSocial, p.cnpj, p.nome_motorista, p.cpf, p.vigencia_do_cadastro, conexaoSql);
+                Console.WriteLine("ok");
+            }
+            
+            conexaoSql.Close();
+        }
+        
 
     }
 }
