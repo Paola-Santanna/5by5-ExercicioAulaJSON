@@ -67,7 +67,6 @@ namespace Proj2_Prof_Andre
             foreach (var p in l)
             {
                 consulta.InsercaoDados(p.razaoSocial, p.cnpj, p.nome_motorista, p.cpf, p.vigencia_do_cadastro, conexaoSql);
-                Console.WriteLine("ok");
             }
             
             conexaoSql.Close();
