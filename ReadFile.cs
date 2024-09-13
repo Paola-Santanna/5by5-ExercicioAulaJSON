@@ -13,7 +13,7 @@ namespace Proj2_Prof_Andre
     {
         public static List<PenalidadesAplicadas> GetData()
         {
-            StreamReader r = new StreamReader("C:\\Users\\Paola\\Downloads\\motoristas_habilitados.json");
+            StreamReader r = new StreamReader("caminho do arquivo");
             string jsonString = r.ReadToEnd();
 
             //Processo de descerialização 
