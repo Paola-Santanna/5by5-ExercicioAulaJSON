@@ -9,9 +9,12 @@ namespace Proj2_Prof_Andre
 {
     public class MotoristaHabilitado
     {
+        ConsultaBanco inserirDados;
+
         [JsonProperty("penalidades_aplicadas")]
         public List<PenalidadesAplicadas> PenalidadesAplicadas { get; set; }
 
+        
         public override string? ToString() => $"penalidades_aplicadas: {PenalidadesAplicadas}";
     }
 }
