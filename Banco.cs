@@ -8,7 +8,7 @@ namespace Proj2_Prof_Andre
 {
     public class Banco
     {
-        readonly string conexaoBD = @"Data Source=127.0.0.1;Initial Catalog=Motoristas_Habilitados;User Id=SA;Password=SqlServer2019!;TrustServerCertificate=True";
+        readonly string conexaoBD = "string de conexão";
 
         public Banco() { } //Construtor vazio
 
